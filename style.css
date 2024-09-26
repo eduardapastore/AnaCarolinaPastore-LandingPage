@@ -28,13 +28,15 @@
 
 body {
     background-color: var(--bgcolor);
-    font: var(--font_family);
+    font-family: var(--font);
+    color: var(--fontcolor);
     margin: 0;                 
     padding: var(--peding); 
 }
 
 .flex{
     display: flex;
+    gap: 2rem;
 }
 
 /*header*/
@@ -66,26 +68,23 @@ header .flex{
 
 /*hero*/
 
-.hero{
-    margin: 108px;
+.hero .flex{
+    margin: 7rem;
     font-family: var(--font);
     align-items: center;
     justify-content: center;
 }
 
-.hero h1, p{
-    color: var(--fontcolor);
-    
-}
-
 .hero h1{
     font-size: 3vw;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
 }
 
 .hero p{
+    margin-bottom: 2rem;
     font-size: 1.8vw;
+    text-align: left;
 }
 
 .hero img {
@@ -95,12 +94,82 @@ header .flex{
 
 @keyframes flutuar{
     0% {
-        top: -100px; /* Posição inicial */
+        top: 0px; /* Posição inicial */
     }
     100% {
-        top: 0px; /* Move para baixo 30 pixels */
+        top: 30px; /* Move para baixo 30 pixels */
     }
 }
 
 /*sobre mim*/
 
+.sobremim{
+    padding: 5rem;
+    margin: 5rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8vw;
+}
+
+.sobremim h1, p{
+    text-align: center;
+    margin-bottom: 0px;
+    padding: 0%;
+}
+
+.sobremim img{
+    border-radius: 2rem;
+}
+
+.sobremim p{
+    font-size: 1.8vw;
+    text-align: justify;
+}
+
+.sobremim .flex{
+    margin: 5rem;
+    align-items: center;
+}
+
+/*logo slider*/
+
+.slider .titu{
+    font-weight: 400;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.logos{
+    margin: 5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+        
+    );  
+}
+
+.logoslide{
+    
+    display: inline-block;
+    text-align: center;
+    animation: slide 8s infinite linear;
+}
+
+.logoslide img{
+    padding-left: 2rem;
+    height: 10rem;
+}
+
+@keyframes slide{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
