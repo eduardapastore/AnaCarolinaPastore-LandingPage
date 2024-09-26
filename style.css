@@ -1,11 +1,29 @@
 *{
     --font: "Outfit", sans-serif;
-    --bgcolor: #170003;
+    --bgcolor: #090001;
     --fontcolor: #FFE6EA;
     --menucolor: #ffe6ea8f;
     --btn: #730917;
     --widite: 90%;
     --peding: 1rem;
+}
+.btn-contato button{
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: var(--btn); 
+    color: var(--fontcolor); 
+    font-family: var(--font);
+    font-size: 1.5rem;
+    border: none; 
+    cursor: pointer;  
+    text-decoration: none; 
+    transition: transform 0.3s ease-in-out;
+    border-radius: 62px;
+}
+
+.btn-contato button:hover{
+    transform: scale(1.2);
+    box-shadow: 0px 0px 8px var(--btn);
 }
 
 body {
@@ -18,6 +36,8 @@ body {
 .flex{
     display: flex;
 }
+
+/*header*/
 
 header{
     margin: 3rem;
@@ -44,22 +64,40 @@ header .flex{
     color: var(--fontcolor)
 }
 
-.btn-contato button{
-    display: inline-block;
-    padding: 20px 40px;
-    background-color: var(--btn); 
-    color: var(--fontcolor); 
+/*hero*/
+
+.hero{
+    margin: 108px;
     font-family: var(--font);
-    font-size: 1.5rem;
-    border: none; 
-    cursor: pointer;  
-    text-decoration: none; 
-    transition: transform 0.3s ease-in-out;
-    border-radius: 62px;
+    align-items: center;
+    justify-content: center;
 }
 
-.btn-contato button:hover{
-    transform: scale(1.2);
-    box-shadow: 0px 0px 8px var(--btn);
+.hero h1, p{
+    color: var(--fontcolor);
+    
 }
 
+.hero h1{
+    font-size: 3vw;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.hero p{
+    font-size: 1.8vw;
+}
+
+.hero img {
+    position: relative; /* Para que o 'top' funcione na animação */
+    animation: flutuar 2s ease-in-out infinite alternate; /* Adiciona a animação */
+}
+
+@keyframes flutuar{
+    0% {
+        top: -100px; /* Posição inicial */
+    }
+    100% {
+        top: 0px; /* Move para baixo 30 pixels */
+    }
+}
