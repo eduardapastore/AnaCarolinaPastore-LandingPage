@@ -355,6 +355,11 @@ header .flex{
     color: var(--menucolor);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 @media (max-width: 932px) {
 
     .menu{
@@ -479,5 +484,9 @@ header .flex{
                                 rgba(0, 0, 0, 4) 50%, 
                                 rgba(0, 0, 0, 4) 90%, 
                                 rgba(0, 0, 0, 0));
+    }
+
+    .creditos{
+        font-size: 1rem;
     }
 }
