@@ -3,7 +3,7 @@
     --bgcolor: #090001;
     --fontcolor: #FFE6EA;
     --menucolor: #ffe6ea8f;
-    --btn: #b20119;
+    --btn: #d70723;
     --widite: 90%;
     --peding: 1rem;
 }
@@ -31,8 +31,7 @@ body {
     font-family: var(--font);
     color: var(--fontcolor);
     margin: 0%;  
-    padding: 0%;               
-    padding: var(--peding); 
+    padding: 0%;                
 }
 
 .flex{
@@ -77,15 +76,14 @@ header .flex{
 }
 
 .hero h1{
-    font-size: 3vw;
-    margin-bottom: 0%;
-    padding-bottom: 0%;
+    font-size: 2.5rem;
+    margin: 0%;
 }
 
 .hero p{
-    margin-bottom: 2rem;
-    font-size: 1.8vw;
-    text-align: left;
+    margin: 1rem;
+    font-size: 1.5vw;
+    text-align: justify;
 }
 
 .hero img {
@@ -156,7 +154,7 @@ header .flex{
 }
 
 .logos{
-    margin: 2rem;
+    margin: 4rem;
     overflow: hidden;
     white-space: nowrap;
     mask-image: linear-gradient(
@@ -283,6 +281,78 @@ header .flex{
     justify-content: center; /* Centraliza os botões */
     width: 100%; /* Largura total do contêiner */
     margin-top: 20px; /* Espaçamento acima dos botões */
+}
+
+
+/*cta*/
+
+.bgimage2{
+    padding-bottom: 0%;
+    padding-top: 0%;
+    background: linear-gradient( rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/4.jpg');
+    background-size: cover; /* Ajusta o tamanho da imagem */
+    background-position: center; /* Centraliza a imagem */
+    mask-image: linear-gradient(to bottom, 
+                            rgba(0, 0, 0, 0), 
+                            rgba(0, 0, 0, 1) 30%, 
+                            rgba(0, 0, 0, 1) 50%, 
+                            rgba(0, 0, 0, 1) 70%, 
+                            rgba(0, 0, 0, 0));
+}
+
+.cta{
+    padding: 8%;
+}
+
+.cta h1, p{
+    text-align: center;
+}
+
+.cta .btn-contato{
+    text-align: center;
+}
+
+.cta h1{
+    font-size: 3rem;
+}
+
+.cta p{
+    font-size: 2rem;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    text-align: center;
+}
+
+.footer .txt p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.footer .socials .flex {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer .socials .flex a i {
+    font-size: 2rem; /* Tamanho dos ícones */
+    color: var(--fontcolor);     /* Cor dos ícones */
+    transition: color transform 0.3s ease;
+}
+
+.footer .socials .flex a i:hover {
+    transform: scale(1.2);
+    color: var(--btn); /* Cor ao passar o mouse */
+}
+
+.creditos{
+    color: var(--menucolor);
 }
 
 @media (max-width: 768px) {
