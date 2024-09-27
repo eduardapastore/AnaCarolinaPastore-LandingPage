@@ -149,6 +149,7 @@ header .flex{
 /*logo slider*/
 
 .sliderr .titu{
+    margin-top: 0%;
     font-weight: 400;
     font-size: 2rem;
     text-align: center;
@@ -192,6 +193,7 @@ header .flex{
 /*slider*/
 
 .card-slider {
+    margin: 0%;
     padding-top: 0%;
     display: flex; /* Usando flexbox para a barra de cartões */
     flex-direction: column; /* Alinha os elementos verticalmente */
@@ -207,6 +209,7 @@ header .flex{
 }
 
 .card-slider .tit h2{
+    margin: 0%;
     font-size: 4rem;
     text-align: center;
 }
@@ -231,6 +234,7 @@ header .flex{
 }
 
 .card h3{
+    margin: 2%;
     font-size: 5rem;
     text-align: center;
 }
@@ -240,29 +244,24 @@ header .flex{
 }
 
 .card img {
+    margin: 0%;
     width: 500px; /* Largura fixa para a imagem */
     height: 500px; /* Altura fixa para a imagem */
     object-fit: cover; /* Mantém a proporção da imagem */
     border-radius: 24px; /* Bordas arredondadas, opcional */
-    margin-right: 15px; /* Espaçamento entre imagem e texto */
     box-shadow: 0 0 24px var(--btn);
 }
 
 .card-content {
+    margin: 0%;
     color: var(--fontcolor); 
     font-family: var(--font);
     font-size: 1.5rem;
     text-align: center;
 }
 
-.slider-buttons {
-    display: flex;
-    gap: 2rem;
-    justify-content: space-between; /* Coloca os botões nas extremidades */
-    margin-top: 10px; /* Espaço entre o conteúdo e os botões */
-}
-
 .slider-btn {
+    margin: 0%;
     background-color: transparent; /* Sem cor de fundo */
     color: var(--fontcolor);
     border: none; /* Sem borda */
