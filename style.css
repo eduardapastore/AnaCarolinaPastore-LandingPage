@@ -76,7 +76,7 @@ header .flex{
 }
 
 .hero h1{
-    font-size: 2.5rem;
+    font-size: 2.5vw;
     margin: 0%;
 }
 
@@ -355,18 +355,129 @@ header .flex{
     color: var(--menucolor);
 }
 
-@media (max-width: 768px) {
-    .sobremim {
-        font-size: 18px; /* Tamanho fixo para telas menores */
-    }
-    
-    .sobremim p {
-        font-size: 18px; /* Tamanho fixo para telas menores */
-    }
+@media (max-width: 932px) {
 
     .menu{
         display: none;
     }
 
-    
+    header {
+        display: flex; /* Garantir que o header seja flex */
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        text-align: center;
+        flex-direction: row; /* Mantém logo e botões na mesma linha */
+    }
+
+    .hero .flex {
+        flex-direction: column; /* Altera para coluna em telas menores */
+        margin: 2rem; /* Ajusta o espaçamento para se adaptar melhor */
+    }
+
+    .hero h1 {
+        font-size: 6vw; /* Ajusta o tamanho da fonte para telas pequenas */
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 4vw; /* Aumenta o tamanho da fonte do texto */
+        text-align: center;
+    }
+
+    .hero .btn-contato{
+        text-align: center;
+    }
+
+    .hero img {
+        width: 80%; /* Ajusta a largura da imagem para ocupar menos espaço */
+        margin-bottom: 2rem; /* Adiciona um espaço embaixo da imagem */
+    }
+
+    .sobremim {
+        flex-direction: column; /* Alinha tudo em uma coluna */
+        padding: 1rem;
+        margin: 0rem;
+    }
+
+    .sobremim img {
+        margin-left: 0;
+        margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
+        max-width: 100%; /* Garante que a imagem não ultrapasse os limites da tela */
+    }
+
+    .sobremim h1{
+        font-size: 2rem;
+    }
+
+    .sobremim p {
+        font-size: 1rem; /* Reduz o tamanho da fonte para telas menores */
+    }
+
+    .sobremim .txt {
+        text-align: center; /* Centraliza o texto em telas menores */
+    }
+
+    .sliderr .titu {
+        font-size: 1.5rem; /* Reduz o tamanho do título em telas menores */
+    }
+
+    .logoslide img {
+        height: 5rem; /* Diminui a altura das imagens em telas menores */
+        padding-left: 1rem; /* Diminui o espaçamento entre as imagens */
+    }
+
+    .logos {
+        margin: 2rem; /* Reduz a margem em telas menores */
+    }
+
+    .card h3, .card h2 {
+        font-size: 1.5rem;
+        margin: 0; /* Removendo margens para reduzir o espaço */
+    }
+
+    .card.active, .card{
+        padding: 20%;
+        margin: 0%;
+    }
+
+    .card img {
+        width: 250px;
+        height: 250px;
+        margin: 5% 0; /* Ajustando a margem para apenas cima e baixo */
+    }
+
+    .card-content {
+        font-size: 1rem;
+    }
+
+    .slider-btn {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    .card-slider .tit h2 {
+        font-size: 2rem;
+        padding: 0; /* Garantindo que não haja padding */
+        margin-top: 5px; /* Apenas um pequeno espaço acima */
+        margin-bottom: 0; /* Sem margem abaixo para colar com o conteúdo */
+    }
+
+    .card-slider{
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .bgimage2{
+        padding-bottom: 0%;
+        padding-top: 0%;
+        background: linear-gradient( rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/4.jpg');
+        background-size: cover; /* Ajusta o tamanho da imagem */
+        background-position: center; /* Centraliza a imagem */
+        mask-image: linear-gradient(to bottom, 
+                                rgba(0, 0, 0, 0), 
+                                rgba(0, 0, 0, 4) 10%, 
+                                rgba(0, 0, 0, 4) 50%, 
+                                rgba(0, 0, 0, 4) 90%, 
+                                rgba(0, 0, 0, 0));
+    }
 }
