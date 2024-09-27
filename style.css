@@ -3,7 +3,7 @@
     --bgcolor: #090001;
     --fontcolor: #FFE6EA;
     --menucolor: #ffe6ea8f;
-    --btn: #730917;
+    --btn: #b20119;
     --widite: 90%;
     --peding: 1rem;
 }
@@ -30,7 +30,8 @@ body {
     background-color: var(--bgcolor);
     font-family: var(--font);
     color: var(--fontcolor);
-    margin: 0;                 
+    margin: 0%;  
+    padding: 0%;               
     padding: var(--peding); 
 }
 
@@ -103,27 +104,41 @@ header .flex{
 
 /*sobre mim*/
 
-.sobremim{
+.bgimage1{
+    padding-bottom: 0%;
+    background: linear-gradient( rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/3.jpg');
+    background-size: cover; /* Ajusta o tamanho da imagem */
+    background-position: center; /* Centraliza a imagem */
+    mask-image: linear-gradient(to bottom, 
+                            rgba(0, 0, 0, 0), 
+                            rgba(0, 0, 0, 1) 30%, 
+                            rgba(0, 0, 0, 1) 50%, 
+                            rgba(0, 0, 0, 1) 70%, 
+                            rgba(0, 0, 0, 0));
+}
+
+.sobremim {
     padding: 5rem;
     margin: 5rem;
     justify-content: center;
     align-items: center;
-    font-size: 1.8vw;
+    font-size: 1.8vw; /* Continue com vw se quiser */
+    min-font-size: 16px; /* Define um tamanho mínimo */
 }
 
-.sobremim h1, p{
-    text-align: center;
+
+.sobremim .txt{
     margin-bottom: 0px;
     padding: 0%;
+    text-align: center;
 }
 
 .sobremim img{
     border-radius: 2rem;
 }
 
-.sobremim p{
-    font-size: 1.8vw;
-    text-align: justify;
+.sobremim p {
+    font-size: 1.5rem; /* Tamanho em rem */
 }
 
 .sobremim .flex{
@@ -133,14 +148,14 @@ header .flex{
 
 /*logo slider*/
 
-.slider .titu{
+.sliderr .titu{
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
 }
 
 .logos{
-    margin: 5rem;
+    margin: 2rem;
     overflow: hidden;
     white-space: nowrap;
     mask-image: linear-gradient(
@@ -162,7 +177,7 @@ header .flex{
 
 .logoslide img{
     padding-left: 2rem;
-    height: 10rem;
+    height: 8rem;
 }
 
 @keyframes slide{
@@ -172,4 +187,117 @@ header .flex{
     to{
         transform: translateX(-100%);
     }
+}
+
+/*slider*/
+
+.card-slider {
+    padding-top: 0%;
+    display: flex; /* Usando flexbox para a barra de cartões */
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+.card-container {
+    padding-top: 0%;
+    display: flex; /* Usando flexbox para alinhar os cards */
+    overflow: hidden; /* Esconde o que ultrapassa o contêiner */
+    width: 100%; /* Ajuste conforme necessário */
+    justify-content: center; /* Centraliza os cartões */
+}
+
+.card-slider .tit h2{
+    font-size: 4rem;
+    text-align: center;
+}
+
+.card {
+    display: none; /* Oculta todos os cards por padrão */
+    margin: 25rem;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo */
+    justify-content: center; /* Centraliza verticalmente */
+    min-width: 300px; /* Largura mínima */
+    max-width: 80vw; /* Largura máxima como porcentagem da largura da tela */
+    min-height: 200px; /* Altura mínima */
+    max-height: 50vh; /* Altura máxima como porcentagem da altura da tela */
+    padding: 0px; /* Adiciona algum espaçamento interno */
+    border-radius: 10px; /* Cantos arredondados */
+    background-color: var(--bgcolor); /* Fundo branco */
+    box-shadow: 0 4px 10px #730917(0, 0, 0, 0.1); /* Sombra leve */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+.card h3{
+    font-size: 5rem;
+    text-align: center;
+}
+
+.card.active {
+    display: flex; /* Mostra apenas o card ativo */
+}
+
+.card img {
+    width: 500px; /* Largura fixa para a imagem */
+    height: 500px; /* Altura fixa para a imagem */
+    object-fit: cover; /* Mantém a proporção da imagem */
+    border-radius: 24px; /* Bordas arredondadas, opcional */
+    margin-right: 15px; /* Espaçamento entre imagem e texto */
+    box-shadow: 0 0 24px var(--btn);
+}
+
+.card-content {
+    color: var(--fontcolor); 
+    font-family: var(--font);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.slider-buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between; /* Coloca os botões nas extremidades */
+    margin-top: 10px; /* Espaço entre o conteúdo e os botões */
+}
+
+.slider-btn {
+    background-color: transparent; /* Sem cor de fundo */
+    color: var(--fontcolor);
+    border: none; /* Sem borda */
+    font-size: 2rem;
+    padding: 30px; /* Espaçamento interno */
+    border-radius: 80%; /* Cantos arredondados */
+    cursor: pointer; /* Cursor em forma de ponteiro */
+    transition: transform 0.3s ease-in-out;
+}
+
+.slider-btn:hover {
+    transform: scale(1.2);
+}
+
+
+/* Centralizando os botões na parte inferior */
+.slider-buttons {
+    display: flex; /* Usando flexbox para alinhar os botões */
+    justify-content: center; /* Centraliza os botões */
+    width: 100%; /* Largura total do contêiner */
+    margin-top: 20px; /* Espaçamento acima dos botões */
+}
+
+@media (max-width: 768px) {
+    .sobremim {
+        font-size: 18px; /* Tamanho fixo para telas menores */
+    }
+    
+    .sobremim p {
+        font-size: 18px; /* Tamanho fixo para telas menores */
+    }
+
+    .menu{
+        display: none;
+    }
+
+    
 }
